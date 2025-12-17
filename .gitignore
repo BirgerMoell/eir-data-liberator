@@ -31,6 +31,10 @@ yarn-error.log*
 dist/
 build/
 
+# Keep dist directory but ignore contents
+dist/*
+!dist/.gitkeep
+
 # Node modules (if we add build tools later)
 node_modules/
 package-lock.json

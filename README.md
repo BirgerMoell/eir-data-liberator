@@ -30,6 +30,20 @@ Healthcare providers lock patient data behind clunky portals with no "Export All
 
 ### For Users
 
+**Option 1: Download Zip File (Easiest)**
+
+1. **Download the extension:**
+   - Download `dist/eir-data-liberator-extension.zip` from the [latest release](https://github.com/BirgerMoell/eir-data-liberator/releases/latest) or [build it yourself](#building-from-source)
+   - Extract the zip file to a folder
+
+2. **Load the extension:**
+   - Open Chrome/Edge/Brave → `chrome://extensions`
+   - Enable **Developer mode** (top right)
+   - Click **Load unpacked**
+   - Select the extracted folder
+
+**Option 2: Clone Repository**
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/BirgerMoell/eir-data-liberator.git
@@ -42,10 +56,22 @@ Healthcare providers lock patient data behind clunky portals with no "Export All
    - Click **Load unpacked**
    - Select the `extension` folder
 
-3. **Use it:**
-   - Navigate to [1177.se](https://1177.se) (or your supported provider)
-   - Log in to your healthcare portal
-   - Click the floating **"Download Journals"** button
+**Using the Extension:**
+
+- Navigate to [1177.se](https://1177.se) (or your supported provider)
+- Log in to your healthcare portal
+- Click the floating **"Download Journals"** button
+
+### Building from Source
+
+To create the zip file yourself:
+
+```bash
+npm install
+npm run package
+```
+
+The zip file will be created in `dist/eir-data-liberator-extension.zip`.
 
 ### For Developers
 

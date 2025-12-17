@@ -18,7 +18,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint extension/**/*.js --ext .js",
-    "validate-manifest": "node -e \"JSON.parse(require('fs').readFileSync('extension/manifest.json', 'utf8'))\""
+    "validate-manifest": "node -e \"JSON.parse(require('fs').readFileSync('extension/manifest.json', 'utf8'))\"",
+    "package": "node scripts/package-extension.js",
+    "build": "npm run validate-manifest && npm run package"
   },
   "devDependencies": {
     "eslint": "^8.0.0"
