@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Eir Data Liberator",
+  "version": "2.0.0",
+  "description": "Download and structure patient journals from healthcare portals worldwide",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://journalen.1177.se/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://journalen.1177.se/*"],
+      "js": [
+        "src/connectors/base-connector.js",
+        "src/connectors/se/1177/scraper.js",
+        "src/connectors/se/1177/normalizer.js",
+        "src/connectors/se/1177/connector.js",
+        "src/core/connector-registry.js",
+        "src/core/ui-manager.js",
+        "src/core/file-downloader.js",
+        "src/core/eir-formatter.js",
+        "data-transfer.js",
+        "content.js"
+      ],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Eir Data Liberator"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

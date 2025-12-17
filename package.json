@@ -1,0 +1,30 @@
+{
+  "name": "eir-data-liberator",
+  "version": "2.0.0",
+  "description": "Download and own your medical records from healthcare portals worldwide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BirgerMoell/eir-data-liberator.git"
+  },
+  "keywords": [
+    "healthcare",
+    "medical-records",
+    "ehr",
+    "patient-data",
+    "browser-extension",
+    "chrome-extension"
+  ],
+  "author": "Eir Data Liberator Contributors",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint extension/**/*.js --ext .js",
+    "validate-manifest": "node -e \"JSON.parse(require('fs').readFileSync('extension/manifest.json', 'utf8'))\""
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
