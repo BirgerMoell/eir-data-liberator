@@ -23,7 +23,7 @@
     "build": "npm run validate-manifest && npm run package"
   },
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^9.39.2"
   },
   "engines": {
     "node": ">=14.0.0"
